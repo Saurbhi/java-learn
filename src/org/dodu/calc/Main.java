@@ -14,8 +14,12 @@ public class Main {
 		System.out.println(myCalculator.getSum(3, 4));
 		System.out.println(myCalculator.getDiff(3.4, 4.6));
 		System.out.println(myCalculator.getMul(3.41, 14.6));
-		System.out.println(myCalculator.getDiv(13.1, 6.6));
+		try {
+			System.out.println(myCalculator.getDiv(13.1, 0));
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		}
 		
-		//System.out.println(myCalculator.getSum(kaduPerson, doduPerson));
+		System.out.println(kaduPerson.getSumofAge(doduPerson));
 	}
 }

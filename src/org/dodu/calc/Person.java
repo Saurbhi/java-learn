@@ -3,7 +3,7 @@ package org.dodu.calc;
 /**
  * The Class Person.
  */
-class Person{
+class Person implements IPersonAgeAddable{
 	
 	private int age;
 	
@@ -19,6 +19,10 @@ class Person{
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	@Override
+	public int getSumofAge(Person p1) {
+		return this.age + p1.age;
 	}
 	
 }
