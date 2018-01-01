@@ -16,6 +16,6 @@ public class Main {
 		System.out.println(myCalculator.getMul(3.41, 14.6));
 		System.out.println(myCalculator.getDiv(13.1, 6.6));
 		
-		System.out.println(myCalculator.getDiv(kaduPerson, doduPerson));
+		//System.out.println(myCalculator.getSum(kaduPerson, doduPerson));
 	}
 }

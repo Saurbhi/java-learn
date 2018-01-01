@@ -6,23 +6,25 @@ package org.dodu.calc;
 public class MyCalculator implements ICalculatable{
 
 	@Override
-	public <T> T getSum(T num1, T num2) {
-		return num1;
+	public <T extends Number> double getSum(T num1, T num2) {
+		return num1.doubleValue() + num2.doubleValue();
+	}
+
+
+	@Override
+	public <T extends Number> double getMul(T num1, T num2) {
+		return num1.doubleValue() * num2.doubleValue();
 	}
 
 	@Override
-	public <T> T getDiff(T num1, T num2) {
-		return null;
+	public <T extends Number> double getDiv(T num1, T num2) {
+		return num1.doubleValue() / num2.doubleValue();
 	}
 
-	@Override
-	public <T> T getMul(T num1, T num2) {
-		return null;
-	}
 
 	@Override
-	public <T> T getDiv(T num1, T num2) {
-		return null;
+	public <T extends Number> double getDiff(T num1, T num2) {
+		return num1.doubleValue() - num2.doubleValue();
 	}
 
 }
